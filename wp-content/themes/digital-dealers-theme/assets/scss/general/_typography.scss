@@ -1,0 +1,56 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+h1 {
+	font-size: $font-size-h1;
+	font-family: $secondary-font;
+	@include max-mq ($ipad) {
+        font-size: $font-size-h1 - 0.5;
+    }
+	@include max-mq ($tab) {
+		font-size: $font-size-h1 - 0.75;
+	}
+	@include max-mq ($mb) {
+		font-size: $font-size-h1 - 1;
+	}
+	@include max-mq ($ip - 20) {
+		font-size: $font-size-h1 - 1.2;
+	}
+	@include max-mq ($xs) {
+		font-size: $font-size-h1 - 1.35;
+	}
+}
+h2 {
+	font-size: $font-size-h2;
+	@include max-mq ($ipad) {
+        font-size: $font-size-h2 - 0.5;
+    }
+	@include max-mq ($tab) {
+		font-size: $font-size-h2 - 0.75;
+	}
+	@include max-mq ($mb) {
+		font-size: $font-size-h2 - 1;
+	}
+	@include max-mq ($ip - 20) {
+		font-size: $font-size-h2 - 1.2;
+	}
+	@include max-mq ($xs) {
+		font-size: $font-size-h2 - 1.35;
+	}
+}
+h3 {
+	font-size: $font-size-h3;
+}
+h4 {
+	font-size: $font-size-h4;
+	@include max-mq ($mb) {
+		font-size: $font-size-h4 - 0.5;
+	}
+}
+h5 {
+	font-size: $font-size-h5;
+}
+h6 {
+	font-size: $font-size-h6;
+}

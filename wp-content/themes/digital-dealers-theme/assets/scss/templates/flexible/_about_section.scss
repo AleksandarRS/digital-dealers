@@ -1,0 +1,100 @@
+.about-us-section {
+    position: relative;
+    &:after {
+        background-color: $secondary-color-500;
+        content: '';
+        height: 70%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+    }
+    .about-us-row {
+        @include max-mq ($ls) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .about-us-section-wrapper {
+        padding-bottom: 100px;
+        padding-top: 60px;
+        position: relative;
+        z-index: 1;
+        @include max-mq ($ipad) {
+            padding-bottom: 60px;
+            padding-top: 35px;
+        }
+    }
+    .about-us-section-background-image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .main-header {
+        color: $white;
+    }
+    .about-us-section-main-image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+        @include max-mq ($sm) {
+            min-height: 400px;
+            background-position: center -50px;
+        }
+        @include max-mq ($mb) {
+            min-height: 320px;
+            background-position: center -35px;
+        }
+        @include max-mq ($ip) {
+            min-height: 260px;
+            background-position: center -25px;
+        }
+        @include max-mq ($xs) {
+            min-height: 220px;
+        }
+    }
+    
+    .about-us-section-main-description {
+        background-color: $white;
+        @extend %box-shadow;
+        padding: 65px;
+        @include max-mq ($ipad) {
+            padding: 25px 45px;
+        }
+        @include max-mq ($mb) {
+            padding: 5px 25px;
+        }
+        p {
+            line-height: 1.6;
+        }
+    }
+}
+
+.main-header {
+    &.main-header-with-description {
+        padding-bottom: 35px;
+        .portfolio-section & {
+            @include max-mq ($lg) {
+                padding-bottom: 15px;
+            }
+            @include max-mq ($mb) {
+                padding-bottom: 10px;
+            }
+        }
+        .main-title {
+            margin-bottom: 0;
+        }
+        .main-short-description {
+            padding-top: 25px;
+            font-size: $font-size-xlarge;
+            @include max-mq ($ip - 20px) {
+                font-size: $font-size-xlarge - 0.2;
+            }
+        }
+    }
+}

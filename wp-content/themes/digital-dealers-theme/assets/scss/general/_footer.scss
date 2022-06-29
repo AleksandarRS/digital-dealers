@@ -1,0 +1,47 @@
+.site-footer {
+    border-top: 1px solid $gray;
+}
+.footer-widgets-wrapper {
+    text-align: center;
+    padding-top: 35px;
+    @include max-mq ($ipad) {
+        padding-top: 10px;
+    }
+    .widget-title {
+        font-family: $tertiary-font;
+        text-transform: uppercase;
+        font-size: $font-size-xlarge + 1.1;
+        margin-bottom: 0.2em;
+        @include max-mq ($ip) {
+            font-size: $font-size-xlarge + 0.60;
+        }
+    }
+    a {
+        text-decoration: underline;
+        transition: color 0.5s;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+    .textwidget {
+        strong,
+        b {
+            font-size: $font-size-xlarge;
+        }
+    }
+    .widget {
+        margin-bottom: 3em;
+        @include max-mq ($ipad) {
+            margin-bottom: 2.5em;
+        }
+        &:first-of-type {
+            .textwidget {
+                p {
+                    &:first-of-type {
+                        font-size: $font-size-xlarge + 0.05;
+                    }
+                }
+            }
+        }
+    }
+}

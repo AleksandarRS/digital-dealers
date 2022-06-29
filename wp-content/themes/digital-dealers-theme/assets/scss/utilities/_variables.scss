@@ -1,0 +1,65 @@
+// Container widths
+$container-width: 1280px;
+$container-narrow-width: 990px;
+
+// Colors
+$primary-color:		#000000;
+$secondary-color:	#2A6192;
+$secondary-color-500:	#011934;
+$tertiary-color:	#aeaeae;
+$white:				#ffffff;
+$black:				#000000;
+$gray:				#aeaeae;
+$gray-100:				#f2f2f2;
+
+// Fonts
+$primary-font: 'Museo Sans 500';
+$secondary-font: 'Museo Sans 700';
+$tertiary-font: 'Museo Sans 900';
+
+// Font Sizes
+$font-size-xsmall:	0.85em;
+$font-size-small:	0.95em;
+$font-size-base:	1em;
+$font-size-large:	1.15em;
+$font-size-xlarge:	1.25em;
+
+// Font Weight
+$font-weight-l: 300;
+$font-weight-r: 400;
+$font-weight-m: 500;
+$font-weight-sb: 600;
+$font-weight-b: 700;
+$font-weight-xb: 900;
+
+// Heading sizes
+$font-size-h1-large: 4.5em;
+$font-size-h1: 3.5em;
+$font-size-h2: 3.5em;
+$font-size-h3: 3.25em;
+$font-size-h4: 3em;
+$font-size-h5: 3em;
+$font-size-h6: 2.75em;
+
+// Breakpoints
+$mac_l: 1660px;
+$mac: 1440px;
+$lt: 1366px;
+$ls: 1280px;
+$lg: 1199px;
+$ipad: 1030px;
+$md: 991px;
+$tab: 800px;
+$sm: 767px;
+$mb_p: 640px;
+$mb: 580px;
+$ip: 420px;
+$xs: 350px;
+
+// Navigation config
+$responsive-toggle-breakpoint: $lg;
+$toggle-menu-height: 20px;
+$toggle-menu-width: 25px;
+$toggle-menu-bar-height: 3px;
+$toggle-menu-bar-color: $primary-color;
+$toggle-menu-bar-active-color: transparent;

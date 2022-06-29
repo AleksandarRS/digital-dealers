@@ -1,0 +1,42 @@
+.cta-section-wrapper {
+    background-color: $gray-100;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    @include max-mq ($ipad) {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+    @include max-mq ($md) {
+        padding-top: 70px;
+    }
+    @include max-mq ($ip) {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    .cta-row {
+        align-items: center;
+    }
+    .main-header {
+        max-width: 310px;
+    }
+    .main-title {
+        font-size: 2em;
+        margin-bottom: 0.6em;
+        margin-top: 0.2em;
+        @include max-mq ($xs) {
+            font-size: 1.8em;
+        }
+    }
+    .cta-section-entry-header-entry-content-wrapper {
+        .section-description {
+            font-size: $font-size-xlarge;
+        }
+    }
+}
+
+.frm_form_fields {
+    .frm_form_title,
+    .frm_description {
+        display: none;
+    }
+}

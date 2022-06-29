@@ -1,0 +1,47 @@
+.logo-menu-wrapper-row {
+    align-items: center;
+}
+.site-header {
+    background-color: $white;
+    border-bottom: 1px solid $secondary-color-500;
+    left: 0;
+    padding: 25px 15px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+    width: 0;
+    width: 100%;
+    z-index: 999;
+    @include max-mq ($ip) {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    &.fixed-site-header {
+        padding: 10px 15px;
+    }
+    .logged-in & {
+        top: 32px;
+    }
+    .site-branding-main-logo {
+        font-size: $font-size-xlarge;
+        @include max-mq ($ip) {
+            font-size: $font-size-xlarge - 0.25;
+        }
+        @include max-mq ($xs) {
+            font-size: $font-size-xlarge - 0.33;
+        }
+        a {
+            transition: color 0.5s;
+        }
+    }
+    .site-title {
+        font-family: $tertiary-font;
+        text-transform: uppercase;
+        font-size: $font-size-xlarge + 0.6;
+        
+    }
+}
+// .site-branding {
+  
+// }

@@ -1,0 +1,23 @@
+.social-icons-wrapper {
+    .social-icon-menu-items {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.lf-social-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .social-icon-menu-items {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    a {
+        text-decoration: none;
+        font-size: 1.9em;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}

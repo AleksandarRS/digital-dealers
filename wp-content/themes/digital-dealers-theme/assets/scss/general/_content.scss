@@ -1,0 +1,65 @@
+.relative {
+    position: relative;
+}
+.section-background-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    width: 100%;
+    z-index: 0;
+    + div {
+        position: relative;
+    }
+}
+
+.main-title {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+    &:after {
+        background-color: $secondary-color;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 4px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 100%;
+    }
+}
+
+.content-area {
+    padding-top: 115px;
+    @include max-mq ($ip) {
+        padding-top: 95px;
+    }
+    @include max-mq ($xs) {
+        padding-top: 90px;
+    }
+}
+.archive {
+    .page-header {
+        text-align: center;
+    }
+    article.post {
+        margin-bottom: 2.5em;
+        padding-bottom: 35px;
+        border-bottom: 1px solid $gray;
+        .entry-title {
+            margin-bottom: 0.15em;
+            a {
+                transition: color 0.5s;
+            }
+        }
+    }
+}
+
+::selection {
+    color: $secondary-color;
+    background: $gray;
+    background: $black;
+}
