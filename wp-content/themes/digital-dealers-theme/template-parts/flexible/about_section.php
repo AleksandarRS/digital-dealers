@@ -8,7 +8,7 @@ $section_main_title = get_sub_field('section_title');
 $section_short_description = get_sub_field('section_short_description');
 $section_description = get_sub_field('section_description');
 ?>
-<section class="about-us-section"<?php if ( $section_background_color ) : ?> style="background-color:<?php echo $section_background_color; ?>"<?php endif; ?>>
+<section class="about-us-section element-should-be-detected"<?php if ( $section_background_color ) : ?> style="background-color:<?php echo $section_background_color; ?>"<?php endif; ?>>
     <div class="about-us-section-wrapper section-wrapper relative">
         <?php  if ( $section_background_image ) : ?>
             <div class="about-us-section-background-image" style="background-image: url(<?php echo esc_url($section_background_image['url']); ?>);" role="img" aria-label="<?php echo esc_attr($section_background_image['alt']); ?>"></div>

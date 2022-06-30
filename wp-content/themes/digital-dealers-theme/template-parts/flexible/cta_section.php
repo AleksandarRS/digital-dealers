@@ -7,7 +7,7 @@ $section_main_title = get_sub_field('section_main_title');
 $section_description = get_sub_field('section_description');
 $add_form_here = get_sub_field('add_form_here');
 ?>
-<section <?php if ( $section_id ) : ?>id="<?php echo $section_id; ?>" <?php endif; ?>class="cta-section">
+<section <?php if ( $section_id ) : ?>id="<?php echo $section_id; ?>" <?php endif; ?>class="cta-section element-should-be-detected">
     <div class="cta-section-wrapper section-wrapper relative"<?php if ( $section_background_color ) : ?> style="background-color:<?php echo $section_background_color; ?>"<?php endif; ?>>
         <?php  if ( $section_background_image ) : ?>
             <div class="cta-section-background-image section-background-image" style="background-image: url(<?php echo esc_url($section_background_image['url']); ?>);" role="img" aria-label="<?php echo esc_attr($section_background_image['alt']); ?>"></div>

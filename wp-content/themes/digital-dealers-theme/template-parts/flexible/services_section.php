@@ -6,7 +6,7 @@ $section_id = get_sub_field('section_id');
 $section_main_title = get_sub_field('section_main_title');
 $section_description = get_sub_field('section_description');
 ?>
-<section <?php if ( $section_id ) : ?>id="<?php echo $section_id; ?>" <?php endif; ?>class="services-section">
+<section <?php if ( $section_id ) : ?>id="<?php echo $section_id; ?>" <?php endif; ?>class="services-section element-should-be-detected">
     <div class="services-section-wrapper section-wrapper relative"<?php if ( $section_background_color ) : ?> style="background-color:<?php echo $section_background_color; ?>"<?php endif; ?>>
         <?php  if ( $section_background_image ) : ?>
             <div class="services-section-background-image section-background-image" style="background-image: url(<?php echo esc_url($section_background_image['url']); ?>);" role="img" aria-label="<?php echo esc_attr($section_background_image['alt']); ?>"></div>

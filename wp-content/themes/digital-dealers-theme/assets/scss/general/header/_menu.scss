@@ -108,6 +108,7 @@
 						color: inherit;
 						width: 100%;
 						padding-bottom: 3px;
+						transition: all 0.5s;
 						&:after {
 							background-color: $secondary-color;
 							bottom: -2px;

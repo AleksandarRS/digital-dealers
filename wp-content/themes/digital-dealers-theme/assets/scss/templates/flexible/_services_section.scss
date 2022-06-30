@@ -6,6 +6,20 @@
         padding-top: 35px;
     }
 }
+.services-items-row {
+    @include max-mq ($mb) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    @include max-mq ($ip) {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    @include max-mq ($xs) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 .services-item {
     padding-bottom: 20px;
     padding-top: 10px;
@@ -35,6 +49,9 @@
         justify-content: center;
         padding-bottom: 15px;
         padding-top: 15px;
+        @include max-mq ($mb) {
+            height: auto !important;
+        }
     }
     .services-title {
         font-size: $font-size-xlarge + 0.15;
