@@ -1,6 +1,7 @@
 <?php
 $section_background_color = get_sub_field('section_background_color');
 $section_main_image = get_sub_field('section_main_image');
+$main_image_link = get_sub_field('main_image_link');
 $section_background_image = get_sub_field('section_background_image');
 $section_id = get_sub_field('section_id');
 
@@ -18,7 +19,9 @@ $section_description = get_sub_field('section_description');
                     <?php if ( $section_main_image ) : ?>
                         <div class="hero-section-main-image col-md-6">
                             <div class="hero-section-main-image-inner">
-                                <img src="<?php echo esc_url($section_main_image['url']); ?>" alt="<?php echo esc_attr($section_main_image['alt']); ?>">
+                                <?php if ( $main_image_link ) : ?><a href="<?php echo $main_image_link; ?>" target="_blank"><?php endif; ?>
+                                    <img src="<?php echo esc_url($section_main_image['url']); ?>" alt="<?php echo esc_attr($section_main_image['alt']); ?>">
+                                <?php if ( $main_image_link ) : ?></a><?php endif; ?>
                             </div>
                         </div>
                     <?php endif; ?>

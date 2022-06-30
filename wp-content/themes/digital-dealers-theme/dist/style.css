@@ -4389,10 +4389,22 @@ fieldset {
   }
 }
 
+.hero-section .hero-section-main-image .hero-section-main-image-inner a:hover img {
+  -webkit-transform: scale(1.025);
+      -ms-transform: scale(1.025);
+          transform: scale(1.025);
+}
+
 .hero-section .hero-section-main-image img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 @media (min-width: 767px) {
@@ -4718,9 +4730,9 @@ fieldset {
 
 @media (min-width: 991px) {
   .portfolio-items .portfolio-item {
-    border: 7px solid #011934;
-    border-bottom: 10px solid #011934;
-    border-top: 10px solid #011934;
+    border: 6px solid #011934;
+    border-bottom: 12px solid #011934;
+    border-top: 12px solid #011934;
   }
 }
 
@@ -4747,10 +4759,43 @@ fieldset {
   }
 }
 
+.portfolio-items .portfolio-item:first-of-type {
+  border-left-width: 12px;
+}
+
+@media (max-width: 580px) {
+  .portfolio-items .portfolio-item:first-of-type {
+    border-left: 10px solid #011934;
+  }
+}
+
+@media (max-width: 991px) {
+  .portfolio-items .portfolio-item:nth-child(2) {
+    border-right: 10px solid #011934;
+  }
+}
+
+@media (max-width: 991px) {
+  .portfolio-items .portfolio-item:nth-child(3) {
+    border-left: 10px solid #011934;
+  }
+}
+
+.portfolio-items .portfolio-item:last-of-type {
+  border-right-width: 12px;
+}
+
 @media (max-width: 580px) {
   .portfolio-items .portfolio-item:last-of-type {
+    border-right: 10px solid #011934;
     border-bottom: 10px solid #011934;
   }
+}
+
+.portfolio-items .portfolio-item:hover .potfolio-image {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .portfolio-items .portfolio-item:hover .portfolio-title {
@@ -4758,7 +4803,7 @@ fieldset {
 }
 
 .portfolio-items .portfolio-item:hover .portfolio-item-inner:after {
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .portfolio-items .portfolio-item-inner {
@@ -4785,9 +4830,16 @@ fieldset {
 }
 
 .portfolio-items .potfolio-image {
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 
 .portfolio-items .portfolio-title {
@@ -4802,7 +4854,7 @@ fieldset {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.5em;
+  font-size: 1.35em;
   height: 90px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -4826,7 +4878,7 @@ fieldset {
 
 @media (max-width: 580px) {
   .portfolio-items .portfolio-title {
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
 }
 

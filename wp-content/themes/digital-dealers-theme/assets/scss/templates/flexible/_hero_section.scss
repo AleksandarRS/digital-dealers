@@ -84,11 +84,20 @@
             @include max-mq ($mb) {
                 max-width: 250px;
             }
+            a {
+                &:hover {
+                    img {
+                        transform: scale(1.025);
+                    }
+                }
+            }
         }
         img {
             display: block;
             margin-left: auto;
             margin-right: auto;
+            transition: all .5s;
+            transform: scale(1);
         }
     }
     .entry-header-entry-content-wrapper {

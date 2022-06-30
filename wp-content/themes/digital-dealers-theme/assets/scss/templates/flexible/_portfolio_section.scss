@@ -27,9 +27,9 @@
         border-collapse: collapse;
         overflow: hidden;
         @include min-mq ($md) {
-            border: 7px solid $secondary-color-500;
-            border-bottom: 10px solid $secondary-color-500;
-            border-top: 10px solid $secondary-color-500;
+            border: 6px solid $secondary-color-500;
+            border-bottom: 12px solid $secondary-color-500;
+            border-top: 12px solid $secondary-color-500;
         }
         @include max-mq ($md) {
             flex: 0 0 50%;
@@ -42,8 +42,26 @@
             border-bottom: 0 solid $secondary-color-500;
             border-top: 10px solid $secondary-color-500;
         }
-        &:last-of-type {
+        &:first-of-type {
+            border-left-width: 12px;
             @include max-mq ($mb) {
+                border-left: 10px solid $secondary-color-500;
+            }
+        }
+        &:nth-child(2) {
+            @include max-mq ($md) {
+                border-right: 10px solid $secondary-color-500;
+            }
+        }
+        &:nth-child(3) {
+            @include max-mq ($md) {
+                border-left: 10px solid $secondary-color-500;
+            }
+        }
+        &:last-of-type {
+            border-right-width: 12px;
+            @include max-mq ($mb) {
+                border-right: 10px solid $secondary-color-500;
                 border-bottom: 10px solid $secondary-color-500;
             }
         }
@@ -51,12 +69,15 @@
             // &:after {
             //     opacity: 0.3;
             // }
+            .potfolio-image {
+                transform: scale(1.05);
+            }
             .portfolio-title {
                 opacity: 1;
             }
             .portfolio-item-inner {
                 &:after {
-                    opacity: 0.3;
+                    opacity: 0.4;
                 }
             }
         }
@@ -83,9 +104,12 @@
         
     }
     .potfolio-image {
+        background-position: center top;
         background-repeat: no-repeat;
         background-size: cover;
         height: 600px;
+        transform: scale(1);
+        transition: all .5s;
     }
     .portfolio-title {
         align-items: center;
@@ -93,7 +117,7 @@
         bottom: 0;
         color: $white;
         display: flex;
-        font-size: 1.5em;
+        font-size: 1.35em;
         height: 90px;
         justify-content: center;
         left: 0;
@@ -109,7 +133,7 @@
         width: 100%;
         z-index: 1;
         @include max-mq ($mb) {
-            font-size: 1.25em;
+            font-size: 1.2em;
         }
     }
 }
