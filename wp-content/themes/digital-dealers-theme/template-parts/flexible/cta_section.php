@@ -8,7 +8,7 @@ $section_description = get_sub_field('section_description');
 $add_form_here = get_sub_field('add_form_here');
 ?>
 <section <?php if ( $section_id ) : ?>id="<?php echo $section_id; ?>" <?php endif; ?>class="cta-section element-should-be-detected">
-    <div class="cta-section-wrapper section-wrapper relative"<?php if ( $section_background_color ) : ?> style="background-color:<?php echo $section_background_color; ?>"<?php endif; ?>>
+    <div class="cta-section-wrapper section-wrapper relative wow fadeIn"<?php if ( $section_background_color ) : ?> style="background-color:<?php echo $section_background_color; ?>"<?php endif; ?> data-wow-delay="0.2s" data-wow-duration="1s">
         <?php  if ( $section_background_image ) : ?>
             <div class="cta-section-background-image section-background-image" style="background-image: url(<?php echo esc_url($section_background_image['url']); ?>);" role="img" aria-label="<?php echo esc_attr($section_background_image['alt']); ?>"></div>
         <?php endif; ?>
@@ -19,18 +19,18 @@ $add_form_here = get_sub_field('add_form_here');
                         <div class="col-md-5 cta-section-entry-header-entry-content-wrapper">
                             <?php if ( $section_main_title ) : ?>
                                 <header class="entry-header main-header">
-                                    <h1 class="main-title"><?php echo $section_main_title; ?></h1>
+                                    <h1 class="main-title wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1s"><?php echo $section_main_title; ?></h1>
                                 </header>
                             <?php endif; ?>
                             <?php  if ( $section_description ) : ?>
-                                <div class="entry-content section-description">
+                                <div class="entry-content section-description wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1s">
                                     <?php echo $section_description; ?>
                                 </div>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
                     <?php  if ( $add_form_here ) : ?>
-                        <div class="entry-content-form col-md-7">
+                        <div class="entry-content-form col-md-7 wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1s">
                             <?php echo $add_form_here; ?>
                         </div>
                     <?php endif; ?>

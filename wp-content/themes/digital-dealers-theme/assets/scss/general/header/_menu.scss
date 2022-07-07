@@ -102,6 +102,13 @@
 					&.current_page_parent{
 						color: $primary-color;
 					}
+					&.active-menu-item {
+						a {
+							&:after {
+								width: 100%;
+							}
+						}
+					}
 					a {
 						display: block;
 						position: relative;
@@ -109,6 +116,10 @@
 						width: 100%;
 						padding-bottom: 3px;
 						transition: all 0.5s;
+						@include max-mq($responsive-toggle-breakpoint) {
+							display: inline-block;
+							width: auto;
+						}
 						&:after {
 							background-color: $secondary-color;
 							bottom: -2px;

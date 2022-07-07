@@ -166,13 +166,19 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		$ = require('jquery');
 
+		var wow = require('./site/wow');
 		var Navigation = require('./core/navigation');
 		var equalheight = require('./site/equalheight');
-		var smoothscroll = require('./site/smoothscroll');
+		// const smoothscroll = require('./site/smoothscroll');
 		var addremoveclass = require('./site/addremoveclass');
 		var example = require('./site/example');
 
 		jQuery(function () {
+
+			/**
+    * Initialize site wow
+    */
+			wow.init();
 
 			/**
     * Initialize site navigation
@@ -190,14 +196,14 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			/**
     * Initialize smoothscroll module
     */
-			smoothscroll.init();
+			//  smoothscroll.init();
 
 			/**
     * Initialize sample module
     */
 			example.init();
 		});
-	}, { "./core/navigation": 1, "./site/addremoveclass": 3, "./site/equalheight": 4, "./site/example": 5, "./site/smoothscroll": 7, "jquery": 8 }], 3: [function (require, module, exports) {
+	}, { "./core/navigation": 1, "./site/addremoveclass": 3, "./site/equalheight": 4, "./site/example": 5, "./site/wow": 7, "jquery": 8 }], 3: [function (require, module, exports) {
 		"use strict";
 
 		// const Global = require('./global');
@@ -241,6 +247,63 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 							_this.$dom.mainHeader.addClass('fixed-site-header');
 						} else {
 							_this.$dom.mainHeader.removeClass('fixed-site-header');
+						}
+					});
+
+					$('[data-toggle]').on('click', function (event) {
+						event.preventDefault();
+						var target = $(this.hash);
+						target.toggle();
+					});
+
+					// Cache selectors
+					var lastId,
+					    topMenu = $("#primary-menu"),
+					    topMenuHeight = topMenu.outerHeight() + 65,
+
+					// All list items
+					menuItems = topMenu.find("a"),
+
+					// Anchors corresponding to menu items
+					scrollItems = menuItems.map(function () {
+						var item = $(this).attr("href");
+						if (item !== '#') {
+							return $(item);
+						}
+					});
+
+					console.log(scrollItems);
+
+					// Bind click handler to menu items
+					// so we can get a fancy scroll animation
+					menuItems.click(function (e) {
+						var href = $(this).attr("href"),
+						    offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+						$('html, body').stop().animate({
+							scrollTop: offsetTop
+						}, 1300);
+						e.preventDefault();
+					});
+
+					// Bind to scroll
+					$(window).scroll(function () {
+						// Get container scroll position
+						var fromTop = $(this).scrollTop() + topMenuHeight;
+
+						// Get id of current scroll item
+						var cur = scrollItems.map(function () {
+							if ($(this).offset().top < fromTop)
+								// console.log(this)
+								return this;
+						});
+						// Get the id of the current element
+						cur = cur[cur.length - 1];
+						var id = cur && cur.length ? cur[0].id : "";
+
+						if (lastId !== id) {
+							lastId = id;
+							// Set/remove active class
+							menuItems.parent().removeClass("active-menu-item").end().filter("[href='#" + id + "']").parent().addClass("active-menu-item");
 						}
 					});
 
@@ -579,9 +642,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
    	# Cache dom and strings
    -------------------------------------------------------------------------------*/
 			$dom: {
-				// window: $(window),
-
-
+				body: $('body')
 			},
 
 			vars: {},
@@ -590,17 +651,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
    	# Initialize
    -------------------------------------------------------------------------------*/
 			init: function init() {
-				if (_this) {
 
-					$('.main-menu-container > ul > .menu-item > a').click(function (e) {
-						e.preventDefault();
-						var target = $($(this).attr('href'));
-						if (target.length) {
-							var scrollTo = target.offset().top - 80;
-							$('body, html').animate({ scrollTop: scrollTo + 'px' }, 800);
-						}
-					});
+				// if( _this ){	
+				// }
+				if ($(window).width() > 766) {
+					new WOW().init();
 				}
+				// new WOW().init();
 			}
 
 		};

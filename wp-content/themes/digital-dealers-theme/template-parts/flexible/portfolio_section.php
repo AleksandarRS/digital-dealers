@@ -7,7 +7,7 @@ $section_main_title = get_sub_field('section_main_title');
 $section_description = get_sub_field('section_description');
 ?>
 <section <?php if ( $section_id ) : ?>id="<?php echo $section_id; ?>" <?php endif; ?>class="portfolio-section element-should-be-detected">
-    <div class="portfolio-section-wrapper section-wrapper relative"<?php if ( $section_background_color ) : ?> style="background-color:<?php echo $section_background_color; ?>"<?php endif; ?>>
+    <div class="portfolio-section-wrapper section-wrapper relative wow fadeIn"<?php if ( $section_background_color ) : ?> style="background-color:<?php echo $section_background_color; ?>"<?php endif; ?> data-wow-delay="0.2s" data-wow-duration="1s">
         <?php  if ( $section_background_image ) : ?>
             <div class="portfolio-section-background-image section-background-image" style="background-image: url(<?php echo esc_url($section_background_image['url']); ?>);" role="img" aria-label="<?php echo esc_attr($section_background_image['alt']); ?>"></div>
         <?php endif; ?>
@@ -16,8 +16,8 @@ $section_description = get_sub_field('section_description');
                 <div class="row portfolio-row">
                     <?php if ( $section_main_title || $section_description ) : ?>
                         <header class="entry-header main-header col-md-12 align-center main-header-with-description">
-                            <h1 class="main-title"><?php echo $section_main_title; ?></h1>
-                            <div class="main-short-description"><?php echo $section_description; ?></div>
+                            <h1 class="main-title wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s"><?php echo $section_main_title; ?></h1>
+                            <div class="main-short-description wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s"><?php echo $section_description; ?></div>
                         </header>
                     <?php endif; ?>
                     <?php // if ( $section_description ) : ?>
@@ -33,7 +33,7 @@ $section_description = get_sub_field('section_description');
                                     $add_portfolio_title = get_sub_field('add_portfolio_title');
                                     $add_portfolio_url = get_sub_field('add_portfolio_url');
                                 ?>
-                                <div class="portfolio-item">
+                                <div class="portfolio-item wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
                                     <a href="<?php echo $add_portfolio_url; ?>" class="portfolio-item-inner" target="_blank">
                                         <div class="potfolio-image" style="background-image: url(<?php echo esc_url($add_portfolio_image['url']); ?>);" role="img" aria-label="<?php echo esc_attr($add_portfolio_image['alt']); ?>"></div>
                                         <h4 class="portfolio-title"><?php echo $add_portfolio_title; ?></h4>

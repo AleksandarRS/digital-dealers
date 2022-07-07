@@ -22,7 +22,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'digitaldealers' ); ?></a>
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header wow fadeInDown" data-wow-delay="0.2s" data-wow-duration="1s" role="banner">
 		<!-- <div class="site-header-inner">
 			<div class="container">
 				<div class="row justify-content-between">

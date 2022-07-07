@@ -8,7 +8,7 @@ $section_main_title = get_sub_field('section_title');
 $section_short_description = get_sub_field('section_short_description');
 $section_description = get_sub_field('section_description');
 ?>
-<section class="about-us-section element-should-be-detected"<?php if ( $section_background_color ) : ?> style="background-color:<?php echo $section_background_color; ?>"<?php endif; ?>>
+<section class="about-us-section element-should-be-detected wow fadeIn"<?php if ( $section_background_color ) : ?> style="background-color:<?php echo $section_background_color; ?>"<?php endif; ?> data-wow-delay="0.2s" data-wow-duration="1s">
     <div class="about-us-section-wrapper section-wrapper relative">
         <?php  if ( $section_background_image ) : ?>
             <div class="about-us-section-background-image" style="background-image: url(<?php echo esc_url($section_background_image['url']); ?>);" role="img" aria-label="<?php echo esc_attr($section_background_image['alt']); ?>"></div>
@@ -18,16 +18,16 @@ $section_description = get_sub_field('section_description');
                 <div class="row about-us-row">
                     <?php if ( $section_main_title || $section_short_description ) : ?>
                         <header class="entry-header main-header col-md-12 align-center main-header-with-description">
-                            <h1 class="main-title"><?php echo $section_main_title; ?></h1>
-                            <div class="main-short-description"><?php echo $section_short_description; ?></div>
+                            <h1 class="main-title wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s"><?php echo $section_main_title; ?></h1>
+                            <div class="main-short-description wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s"><?php echo $section_short_description; ?></div>
                         </header>
                     <?php endif; ?>
                     <?php if ( $main_image ) : ?>
-                        <div class="col-md-6 about-us-section-main-image" style="background-image: url(<?php echo esc_url($main_image['url']); ?>);" role="img" aria-label="<?php echo esc_attr($main_image['alt']); ?>">
+                        <div class="col-md-6 about-us-section-main-image wow fadeInLeft" data-wow-delay="0.8s" data-wow-duration="1s" style="background-image: url(<?php echo esc_url($main_image['url']); ?>);" role="img" aria-label="<?php echo esc_attr($main_image['alt']); ?>">
                         </div>
                     <?php endif; ?>
                     <?php if ( $section_main_title || $section_description ) : ?>
-                        <div class="col-md-6 about-us-section-main-description">
+                        <div class="col-md-6 about-us-section-main-description wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="1s">
                             <?php  if ( $section_description ) : ?>
                                 <div class="entry-content section-description">
                                     <?php echo $section_description; ?>

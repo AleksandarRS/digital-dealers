@@ -10,7 +10,7 @@
 ?>
 			</div><!-- #content -->
 
-			<footer id="colophon" class="site-footer" role="contentinfo">
+			<footer id="colophon" class="site-footer wow fadeIn" data-wow-delay="0.4s" data-wow-duration="1s" role="contentinfo">
 				<div class="widget-wrapper">
 					<div class="container">
 						<div class="row footer-widgets-wrapper">

@@ -2,13 +2,20 @@
 
 $ = require('jquery');
 
+const wow = require('./site/wow');
 const Navigation = require('./core/navigation');
 const equalheight = require('./site/equalheight');
-const smoothscroll = require('./site/smoothscroll');
+// const smoothscroll = require('./site/smoothscroll');
 const addremoveclass = require('./site/addremoveclass');
 const example = require('./site/example');
 
 jQuery( function(){
+
+  
+  /**
+   * Initialize site wow
+   */
+   wow.init();
 
   /**
    * Initialize site navigation
@@ -26,7 +33,7 @@ jQuery( function(){
   /**
    * Initialize smoothscroll module
    */
-   smoothscroll.init();
+  //  smoothscroll.init();
  
   /**
    * Initialize sample module

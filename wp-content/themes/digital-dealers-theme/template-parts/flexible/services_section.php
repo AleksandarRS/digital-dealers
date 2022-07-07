@@ -6,7 +6,7 @@ $section_id = get_sub_field('section_id');
 $section_main_title = get_sub_field('section_main_title');
 $section_description = get_sub_field('section_description');
 ?>
-<section <?php if ( $section_id ) : ?>id="<?php echo $section_id; ?>" <?php endif; ?>class="services-section element-should-be-detected">
+<section <?php if ( $section_id ) : ?>id="<?php echo $section_id; ?>" <?php endif; ?>class="services-section element-should-be-detected wow fadeIn" data-wow-delay="0.2s" data-wow-duration="1s">
     <div class="services-section-wrapper section-wrapper relative"<?php if ( $section_background_color ) : ?> style="background-color:<?php echo $section_background_color; ?>"<?php endif; ?>>
         <?php  if ( $section_background_image ) : ?>
             <div class="services-section-background-image section-background-image" style="background-image: url(<?php echo esc_url($section_background_image['url']); ?>);" role="img" aria-label="<?php echo esc_attr($section_background_image['alt']); ?>"></div>
@@ -16,7 +16,7 @@ $section_description = get_sub_field('section_description');
                 <div class="row services-row">
                     <?php if ( $section_main_title ) : ?>
                         <header class="entry-header main-header col-md-12 align-center">
-                            <h1 class="main-title"><?php echo $section_main_title; ?></h1>
+                            <h1 class="main-title wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s"><?php echo $section_main_title; ?></h1>
                         </header>
                     <?php endif; ?>
                     <?php  if ( $section_description ) : ?>
@@ -30,7 +30,7 @@ $section_description = get_sub_field('section_description');
                                 <?php while ( have_rows('add_services_here') ) : the_row(); ?>
                                 <?php $add_service_icon = get_sub_field('add_service_icon'); ?>
                                     <div class="col-md-3 services-item align-center">
-                                        <div class="services-item-inner">
+                                        <div class="services-item-inner wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
                                             <?php  if ( $add_service_icon ) : ?>
                                                 <div class="services-item-icon">
                                                     <img src="<?php echo esc_url($add_service_icon['url']); ?>" alt="<?php echo esc_attr($add_service_icon['alt']); ?>">
