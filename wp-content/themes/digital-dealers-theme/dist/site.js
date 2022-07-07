@@ -169,7 +169,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var wow = require('./site/wow');
 		var Navigation = require('./core/navigation');
 		var equalheight = require('./site/equalheight');
-		// const smoothscroll = require('./site/smoothscroll');
 		var addremoveclass = require('./site/addremoveclass');
 		var example = require('./site/example');
 
@@ -193,10 +192,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     * Initialize addremoveclass module
     */
 			addremoveclass.init();
-			/**
-    * Initialize smoothscroll module
-    */
-			//  smoothscroll.init();
 
 			/**
     * Initialize sample module
@@ -230,18 +225,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
    -------------------------------------------------------------------------------*/
 			init: function init() {
 				if (_this) {
-					// $(window).on('scroll load', function () {
-					// 	_this.$dom.mainHeader.scroll(function() {    
-					// 		var scroll = _this.$dom.mainHeader.scrollTop();
 
-					// 		if (scroll >= 50) {
-					// 			_this.$dom.mainHeader.addClass("fixed-site-header");
-					// 		} else {
-					// 			_this.$dom.mainHeader.removeClass("fixed-site-header");
-					// 		}
-
-					// 	});
-					// });
 					$(window).scroll(function () {
 						if ($(this).scrollTop() > 50) {
 							_this.$dom.mainHeader.addClass('fixed-site-header');
@@ -306,32 +290,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 							menuItems.parent().removeClass("active-menu-item").end().filter("[href='#" + id + "']").parent().addClass("active-menu-item");
 						}
 					});
-
-					// //Detect element .contact-global-details to window and animation items
-					// var $animation_elements = $('.element-should-be-detected');
-					// var $window = $(window);
-					// $window.on('scroll resize', check_if_in_view);
-					// function check_if_in_view() {
-					// 	var window_height = $window.height();
-					// 	var window_top_position = $window.scrollTop();
-					// 	var window_bottom_position = (window_top_position + window_height);
-
-					// 	$.each($animation_elements, function() {
-					// 		//var $element = $(this);
-					// 		var $element = $(this);
-					// 		var element_height = $element.outerHeight();
-					// 		var element_top_position = $element.offset().top;
-					// 		var element_bottom_position = (element_top_position + element_height);
-
-					// 		//check to see if this current container is within viewport
-					// 		if ((element_bottom_position >= window_top_position) &&
-					// 			(element_top_position <= window_bottom_position)) {
-					// 			$element.addClass('in-view');
-					// 		} else {
-					// 			$element.removeClass('in-view');
-					// 		}
-					// 	});
-					// }
 				}
 			}
 
