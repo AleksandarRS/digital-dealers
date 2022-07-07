@@ -256,7 +256,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 						}
 					});
 
-					console.log(scrollItems);
+					// console.log(scrollItems)
+
 
 					// Bind click handler to menu items
 					// so we can get a fancy scroll animation

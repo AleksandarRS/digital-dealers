@@ -54,7 +54,7 @@ let _this = module.exports = {
 					if(item !== '#') {return $(item)}
 				});
 
-			console.log(scrollItems)
+			// console.log(scrollItems)
 
 
 			// Bind click handler to menu items
